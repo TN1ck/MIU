@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gödel Escher Back - MUI</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="app">
+      <div class="container">
+        <h1>Gödel Escher Bach - MIU System</h1>
+        <p>
+            I'm currently reading Gödel Escher Bach. His first formal system he introduces is the MIU system.
+            It follows four rules.
+            <ol>
+                <li>If you posses a string whose last letter is I, you can add on a U at the end.</li>
+                <li>Suppose you have Mx. Then you may add Mxx to your collection.
+                <li>If III occurs in one of the string in your collection, you may make a new string with U in place of III</li>
+                <li>If UU occurs inside one of your strings, you can drop it.</li>
+            </ol>
+            <strong>The Goal of the Book is to get from MI to MU.</strong>
+            You can use the applet below to apply the rules, for feedback, check the console.
+        </p>
+        <hr />
+        <h2>Current String</h2>
+        <div id="result" class="result">
+        </div>
+        <button id="ruleOne">
+            Rule One
+        </button>
+        <button id="ruleTwo">
+            Rule Two
+        </button>
+        <button id="ruleThree">
+            Rule Three
+        </button>
+        <button id="ruleFour">
+            Rule Four
+        </button>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>

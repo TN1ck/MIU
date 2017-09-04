@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #f3f3f3;
+}
+
+hr {
+    border: none;
+    background: black;
+    height: 2px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.container {
+    width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fefefe;
+}
+
+.result {
+    padding: 20px;
+    border: 2px black solid;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 18px;
+    margin-bottom: 20px;
+    word-break: break-all;
+}
+
+.piecity {
+    height: 100px;
+    width: 100px;
+    float: left;
+}
+
+button {
+    background: none;
+    border: 2px solid black;
+    padding: 5px 10px;
+}
+
+button:hover {
+    border-color: red;
+}
+
+li {
+    margin: 5px 0;
+}
