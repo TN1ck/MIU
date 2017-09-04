@@ -82,8 +82,8 @@ function ruleFour(string) {
   });
 }
 
-
-let currentString = 'MI';
+const START_STRING = 'MI';
+let currentString = START_STRING;
 
 function renderGame() {
 
@@ -91,6 +91,7 @@ function renderGame() {
   const ruleTwoButton = document.getElementById('ruleTwo');
   const ruleThreeButton = document.getElementById('ruleThree');
   const ruleFourButton = document.getElementById('ruleFour');
+  const resetButton = document.getElementById('reset');
   const result = document.getElementById('result');
 
   result.innerHTML = currentString;
@@ -144,6 +145,11 @@ Please enter a valid number to apply the rule.
 
   ruleFourButton.onclick = () => {
     applyRule(currentString, ruleFour, resultCallback);
+  }
+
+  resetButton.onclick = () => {
+    currentString = START_STRING;
+    renderGame();
   }
 
 }
