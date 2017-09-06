@@ -23,7 +23,7 @@
             You can use the applet below to apply the rules, for feedback, check the console.
         </p>
         <hr />
-        <h2>Current String</h2>
+        <h2>MIU System Applet</h2>
         <div id="result" class="result">
         </div>
         <button id="ruleOne">
@@ -41,6 +41,33 @@
         <button id="reset">
             RESET
         </button>
+        <hr />
+        <h2>So how to get from the <code>I</code> to the <code>U</code>?</h2>
+        
+        <p>The only rule that can reduce the number of <code>I</code> the the 3rd rule, so we should focus on that.
+        To remove all <code>I</code>, we need to fullfill <code>count(I) mod 3 = 0</code>, which means that the number of <code>I</code> must be divisible by 3.
+        <code>count</code> represents the number of <code>I</code>, <code>mod</code> is the mathematical operation modulo.</p>
+        
+        <p>With the second rule, we can duplicate the starting <code>I</code>.
+        But doubling a number that is not divisible by 3 will never make it divisible by 3.</p>
+        
+        <blockquote>
+            <strong>Proof sketch:</strong>
+            <p>Suppose you have a number <code>n</code> that is not divisible by 3, so <code>n mod 3 != 0</code>, which means that <code>n = x * 3 + y</code>, where <code>x</code> can be any number and <code>y</code> is 1 or 2.
+            When doubling the number we get <code>n * 2 = x * 6 + y * 2</code>.
+            <code>y * 2</code> is now 2 or 4, both numbers are still not divisible by 2. <code>x * 6</code> is divisible by 3, so adding 2 or 4 will make it not divisible by 3.</p>
+        </blockquote>
+        
+        <p>Reducing the number of <code>I</code> by 3 obviously won't help, we can only use this rule in a useful way when we already have a number that is divisible by 3.
+        All other rules don't affect the number of <code>I</code>.</p>
+        
+        <p>So the first exercise given by Douglas Hofstadter in <em>Gödel Escher Bach</em> is <strong>impossible</strong> to solve.</p>
+        
+        <p>When you don't believe this proof, simply try it out and check if you're able to find a solution. <em>You won't.</em></p>
+
+        <p>The code for this page can be found at <a href="https://github.com/TN1ck/MIU">https://github.com/TN1ck/MIU</a>.</p>
+
+        <strong itemprop="author">- Tom Nick</strong>
     </div>
     <script type="text/javascript" src="script.js"></script>
   </body>
